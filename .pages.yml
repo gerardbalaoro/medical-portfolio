@@ -2,6 +2,19 @@ media:
   input: public
   output: /
 content:
+  - name: pages
+    label: Pages
+    type: collection
+    path: src/content/pages
+    fields:
+      - { name: id, label: Identifier, type: string }
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Description, type: text }
+      - name: parent
+        label: Category
+        type: reference
+        options:
+          collection: pages
   - name: posts
     label: Posts
     type: collection
